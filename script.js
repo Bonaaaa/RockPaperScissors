@@ -16,3 +16,12 @@ function getComputerChoice(){
     }
 }
 
+// Step 3: Write the logic to get the human choice. Your game will be played by a human player. You will write a function that takes the user choice and returns it.
+// pseudocode for function asking human to input rock paper or scissors
+// 1. ask human to write rock, paper or scissors
+// 2. save the input
+// 3. return the input
+function getHumanChoice(){
+    let humanChoice = prompt("rock, paper, or scissors?")
+    return humanChoice.toLowerCase(); // convert the input to lowercase to make it case-insensitive
+}
