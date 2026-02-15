@@ -17,7 +17,7 @@ function getComputerChoice(){
 }
 
 // Step 3: Write the logic to get the human choice. Your game will be played by a human player. You will write a function that takes the user choice and returns it.
-// pseudocode for function asking human to input rock paper or scissors
+// pseudocode for function asking human to input rock paper or scissors:
 // 1. ask human to write rock, paper or scissors
 // 2. save the input
 // 3. return the input
@@ -32,3 +32,34 @@ function getHumanChoice(){
 // 2. create variable to keep score for computer with initial value 0
 let humanScore = 0;
 let computerScore = 0;
+
+// Step 5: Write the logic to play a single round
+// pseudocode to play the game:
+// 1. Create a new function named playRound.
+// 2. Define two parameters for playRound: humanChoice and computerChoice. Use these two parameters to take the human and computer choices as arguments.
+// 3. Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
+// 4. Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
+// 5. Increment the humanScore or computerScore variable based on the round winner.
+function playRound (){
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
+    if (humanChoice === "rock" && computerChoice === "rock"){
+        console.log("Draw! rock meets rock");
+    } else if (humanChoice === "rock" && computerChoice === "paper"){
+        console.log("You lose! rock beaten by paper");
+    } else if (humanChoice === "rock" && computerChoice === "scissors"){
+        console.log("You win! rock beats scissors");
+    } else if (humanChoice === "paper" && computerChoice === "paper"){
+        console.log("Draw! paper meets paper");
+    } else if (humanChoice === "paper" && computerChoice === "rock"){
+        console.log("You win! paper beats rock");
+    } else if (humanChoice === "paper" && computerChoice === "scissors"){
+        console.log("You lose! paper beaten by scissors");
+    } else if (humanChoice === "scissors" && computerChoice === "scissors"){
+        console.log("Draw! scissors meets scissors");
+    } else if (humanChoice === "scissors" && computerChoice === "paper"){
+        console.log("You win! scissors beats paper");
+    } else if (humanChoice === "scissors" && computerChoice === "rock"){
+        console.log("You lose! scissors beaten by rock");
+    }
+}
