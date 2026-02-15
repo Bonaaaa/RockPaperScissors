@@ -30,6 +30,7 @@ function getHumanChoice(){
 // pseudocode to keep score for human and computer in each own variable
 // 1. create variable to keep score for human with initial value 0
 // 2. create variable to keep score for computer with initial value 0
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -47,19 +48,26 @@ function playRound (){
         console.log("Draw! rock meets rock");
     } else if (humanChoice === "rock" && computerChoice === "paper"){
         console.log("You lose! rock beaten by paper");
+        computerScore++;
     } else if (humanChoice === "rock" && computerChoice === "scissors"){
         console.log("You win! rock beats scissors");
+        humanScore++;
     } else if (humanChoice === "paper" && computerChoice === "paper"){
         console.log("Draw! paper meets paper");
     } else if (humanChoice === "paper" && computerChoice === "rock"){
         console.log("You win! paper beats rock");
+        humanScore++;
     } else if (humanChoice === "paper" && computerChoice === "scissors"){
         console.log("You lose! paper beaten by scissors");
+        computerScore++;
     } else if (humanChoice === "scissors" && computerChoice === "scissors"){
         console.log("Draw! scissors meets scissors");
     } else if (humanChoice === "scissors" && computerChoice === "paper"){
         console.log("You win! scissors beats paper");
+        humanScore++;
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
         console.log("You lose! scissors beaten by rock");
+        computerScore++;
     }
+    console.log('Results this round: Human: ' + humanScore + ', Computer: ' + computerScore);
 }
