@@ -25,3 +25,10 @@ function getHumanChoice(){
     let humanChoice = prompt("rock, paper, or scissors?")
     return humanChoice.toLowerCase(); // convert the input to lowercase to make it case-insensitive
 }
+
+// Step 4: Declare the players score variables. Your game will keep track of the players score. You will write variables to keep track of the players score.
+// pseudocode to keep score for human and computer in each own variable
+// 1. create variable to keep score for human with initial value 0
+// 2. create variable to keep score for computer with initial value 0
+let humanScore = 0;
+let computerScore = 0;
