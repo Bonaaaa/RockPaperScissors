@@ -42,8 +42,8 @@ let computerScore = 0;
 // 4. Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
 // 5. Increment the humanScore or computerScore variable based on the round winner.
 function playRound (){
-    computerChoice = getComputerChoice();
-    humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
     if (humanChoice === "rock" && computerChoice === "rock"){
         console.log("Draw! rock meets rock");
     } else if (humanChoice === "rock" && computerChoice === "paper"){
@@ -69,5 +69,25 @@ function playRound (){
         console.log("You lose! scissors beaten by rock");
         computerScore++;
     }
-    console.log('Results this round: Human: ' + humanScore + ', Computer: ' + computerScore);
 }
+
+// Step 6: Write the logic to play the entire game. Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+
+// pseudocode to play multiple games:
+// 1. Create a new function named playGame.
+// 2. Move your playRound function and score variables so that they’re declared inside of the new playGame function
+// 3. Play 5 rounds by calling playRound 5 times.
+
+function playGame(){
+    for (let i=0; i<5; i++){
+        playRound();
+    }
+    console.log('After 5 rounds, You got ' + humanScore + ' while computer got ' + computerScore);
+    if (humanScore > computerScore){
+        console.log("You win the match!");
+    } else if (humanScore < computerScore){
+        console.log("You lose the match!")
+    } else {console.log("The match end in draw!")}
+}
+
+playGame();
